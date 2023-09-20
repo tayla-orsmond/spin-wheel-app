@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* CSS Variables */
+:root {
+  --color-primary: #4cb5ae;
+  --color-secondary: #94ddbc;
+  --color-tertiary: #a01616;
+  --color-black: #272838;
+  --color-white: #f4f4f4;
+  --color-grey: #ccc;
+}
+
+* {
+  /* Reset CSS */
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #2b2828;
+  background-color: #f4f4f4;
+  padding-inline-start: 0px;
+}
+
+/* Actual Styling */
+
+h1 {
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  flex-basis: 100%;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 1rem;
+  padding: 10px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button.delete-button,
+button#clear-button {
+  background-color: var(--color-tertiary);
+}
+
+button:hover,
+button.delete-button:hover,
+button#clear-button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-black);
+}
+
+button:disabled,
+button.delete-button:disabled,
+button#clear-button:disabled {
+  background-color: var(--color-grey);
+  color: var(--color-black);
+  cursor: not-allowed;
+}
+
+.app-container {
+  max-width: 70%;
+  height: 100%;
+  padding: 30px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: start;
+}
+
+.list-container {
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 45%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.list-container ul {
+  list-style: none;
+  margin: 5px 0;
+}
+
+.list-container ul li {
+  padding: 5px 8px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-overflow: ellipsis;
+}
+
+.add-remove-container {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-remove-container input {
+  flex-basis: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.wheel-container {
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 35%;
+}
+
+.wheel-container canvas {
+  margin-bottom: 20px;
+}
+
+.wheel-container #result {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
